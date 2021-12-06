@@ -38,7 +38,7 @@ pyplot.close()
 machine = FactorAnalyzer(n_factors=6, rotation='varimax')
 machine.fit(dataset)
 output = machine.loadings_
-numpy.set_printoptions()
+numpy.set_printoptions(suppress=True)
 print(output)
 
 #Interpretation: Each question (rows), each column()
@@ -49,7 +49,7 @@ machine = FactorAnalyzer(n_factors=5, rotation='varimax')
 machine.fit(dataset)
 loadings = machine.loadings_
 # numpy.set_printoptions()
-print(output)
+print(loadings)
 
 
 print("factor loadings:\n")
@@ -58,5 +58,7 @@ print(machine.get_factor_variance())
 
 dataset = dataset.values #transforms the data into array
 
+results = numpy.dot(dataset, loadings)
+
 print(result)
-print(result.values)
+print(result.shape)
