@@ -1,4 +1,4 @@
-# Factor_analysis
+# Personality test - Factor analysis
 
 Dimension Reduction Technique
 
